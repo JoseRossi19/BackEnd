@@ -12,8 +12,6 @@ import javax.validation.constraints.NotBlank;
  */
 public class dtoPersona {
     @NotBlank
-    private int id;
-    @NotBlank
     private String nombre;
     @NotBlank
     private String apellido;
@@ -26,19 +24,10 @@ public class dtoPersona {
     }
 
     public dtoPersona(int id, String nombre, String apellido, String descripcion, String img) {
-        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.descripcion = descripcion;
         this.img = img;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
