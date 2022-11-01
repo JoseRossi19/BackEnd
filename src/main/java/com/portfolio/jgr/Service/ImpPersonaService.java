@@ -39,11 +39,8 @@ public class ImpPersonaService{
         return ipersonaRepository.existsById(id);
     }
     
-    public boolean existsByNombreE(String nombre){
+    public boolean existsByNombre(String nombre){
         return ipersonaRepository.existsByNombre(nombre);
     }
 
-    public boolean existByNombre(String nombre) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
