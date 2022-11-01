@@ -50,22 +50,7 @@ public class PersonaController {
         return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
     }*/
     
-   @PostMapping("/crear")
-    public ResponseEntity<Persona> create(@RequestBody dtoPersona dtopersona){
-        if(StringUtils.isBlank(dtopersona.getNombre())){
-            return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
-        }
-        if(personaService.existByNombre(dtopersona.getNombre())){
-            return new ResponseEntity(new Mensaje("Ese nombre ya existe"), HttpStatus.BAD_REQUEST);
-        }
-        
-        Persona persona = new Persona(
-                dtopersona.getNombre(), dtopersona.getDescripcion()
-            );
-        personaService.save(persona);
-        return new ResponseEntity(new Mensaje("persona creada"), HttpStatus.OK);
-                
-    }
+   
     
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoPersona dtopersona){
