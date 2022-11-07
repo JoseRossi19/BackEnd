@@ -15,6 +15,7 @@
     <description>Portfolio de Jrossi</description>
     <properties>
         <java.version>1.8</java.version>
+        <start-class>com.portfolio.jgr.JgrApplication</start-class>
     </properties>
     <dependencies>
         <dependency>
